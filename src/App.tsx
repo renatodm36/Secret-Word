@@ -27,7 +27,7 @@ function App() {
 
   const [guessedLetters, setGuessedLetters] = useState<string[]>([]);
   const [wrongLetters, setWrongLetters] = useState<string[]>([]);
-  const [guesses, setGuesses] = useState(3);
+  const [guesses, setGuesses] = useState(10);
   const [score, setScore] = useState(0);
 
   const pickWordAndCategory = useCallback(() => {
@@ -48,7 +48,6 @@ function App() {
 
     setGuessedLetters([]);
     setWrongLetters([]);
-    setGuesses(3);
     setGameStage(stages[1].name);
   }, [pickWordAndCategory]);
 
